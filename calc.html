@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+<h1>Calculater</h1>
+<h2 id="Action"></h2>
+
+      <input id="FirstNum" type="number">
+      <input id="SecondNum" type="number">
+      <INPUT TYPE="text" disabled ID="add" NAME="result" VALUE="">
+      <button type="button" onclick="PlusAction()">+</button>
+      <button type="button" onclick="MinusAction()">-</button>
+      <button type="button" onclick="DivAction()">/</button>
+      <button type="button" onclick="MultiAction()">*</button>
+
+  <script>
+      const CalcAction = {
+          UserAction: "Please Enter 2 numbers to calculate",
+          
+      }
+      document.getElementById("Action").innerHTML = CalcAction.UserAction
+      function PlusAction()
+      {
+        let Num1 = document.getElementById("FirstNum").value
+        let Num2 = document.getElementById("SecondNum").value
+        let third = +Num1 + +Num2;
+        document.getElementById('add').value = third;        
+      }
+      function MinusAction()
+      {
+        let Num1 = document.getElementById("FirstNum").value
+        let Num2 = document.getElementById("SecondNum").value
+        let third = Num1 - Num2;
+        alert(third)
+      }
+      function MultiAction()
+      {
+        let Num1 = document.getElementById("FirstNum").value
+        let Num2 = document.getElementById("SecondNum").value
+        let third = Num1 * Num2;
+        alert(third)
+      }
+      function DivAction()
+      {
+        let Num1 = document.getElementById("FirstNum").value
+        let Num2 = document.getElementById("SecondNum").value
+        let third = Num1 / Num2;
+        alert(third)
+      }
+      
+  </script>
+</head>
